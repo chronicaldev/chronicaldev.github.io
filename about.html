@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CHRONICAL</title>
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <dropdown id="dropdown" class="phone">
+        <a href="/">Home</a>
+        <a href="/products.html">Products</a>
+        <a href="/ideology.html">Ideology</a>
+        <a href="/design-philosophy.html">Design Philosophy</a>
+        <a href="/about.html">About</a>
+    </dropdown>
+    <nav>
+        <content>
+            <div id="l">
+                <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M112.5 70L75 10L0 130H75H78.4788L114.239 72.783L112.5 70ZM120.136 82.217L90.2712 130H150L120.136 82.217Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div id="m">
+                <a href="/">Home</a>
+                <a href="/products.html">Products</a>
+                <a href="/ideology.html">Ideology</a>
+                <a href="/design-philosophy.html">Design Philosophy</a>
+                <a href="/about.html">About</a>
+            </div>
+            <div id="r">
+                <div id="dropdown-toggle" class="phone dropdown-toggle">
+                    <div></div>
+                </div>
+            </div>
+        </content>
+    </nav>
+    <main>
+        <section> 
+            <content>
+                
+            </content>
+        </section>
+    </main>
+    <footer>
+        <span>2022 <span class="branded bold">CHRONICAL</span></span>
+    </footer>
+
+    <script>
+        const dropdownToggle = document.querySelector('#dropdown-toggle');
+        const dropdown = document.querySelector('#dropdown');
+        const nav = document.querySelector('nav');
+
+        dropdownToggle.addEventListener('click', () => {
+            let isOn = dropdownToggle.classList.contains('on');
+            isOn ? dropdownToggle.classList.remove('on') : dropdownToggle.classList.add('on');
+            isOn ? dropdown.classList.remove('on') : dropdown.classList.add('on');
+            nav.style = !isOn ? 'background: transparent; backdrop-filter: none;' : ''
+        })
+    </script>
+</body>
+</html>
