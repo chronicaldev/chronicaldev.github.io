@@ -30,6 +30,20 @@
     color: #757575;
 }
 
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
 h1.gradient, h2.gradient, h3.gradient, h4.gradient, h5.gradient, h6.gradient, a.gradient, p.gradient, span.gradient, b.gradient, i.gradient, u.gradient {
     --angle: 90deg;
     position: relative;
@@ -99,7 +113,7 @@ button.accent:hover {
 
 div.button-group {
     position: relative;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;

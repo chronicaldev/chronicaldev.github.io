@@ -7,6 +7,18 @@
     <title>Products - CHRONICAL</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ludum-icons.css"></head>
+
+    <style>
+        .flash {
+            background-image: url('assets/images/flash-mobile.svg');
+        }
+
+        @media (min-height: 640px) and (min-width: 120vh) { 
+            .flash {
+                background-image: url('assets/images/flash.svg');
+            }
+        }
+    </style>
 <body>
     <dropdown id="dropdown" class="phone">
         <a href="/">Home</a>
@@ -37,11 +49,17 @@
         </content>
     </nav>
     <main>
-        <section class="center"> 
-            <div>
-                <h1>Nothing here yet...</h1>
-                <h2>Come back soon!</h2>
-            </div>
+        <section class="bg-img flash"> 
+            <content class="split-half">
+                <div class="product-head">
+                    <h1>Flash Shell</h1>
+                    <h2>Learn once, use everywhere</h2>
+                    <div class="button-group">
+                        <button onclick="window.location.href='https://github.com/BlackBirdTV/flash-shell'">GitHub</button>
+                        <button onclick="window.location.href='https://blackbirdtv.github.io/flash-shell'">Website</button>
+                    </div>
+                </div>
+            </content>
         </section>
     </main>
     <footer>
