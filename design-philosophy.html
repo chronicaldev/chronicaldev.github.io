@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Philosophy - CHRONICAL</title>
-    <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="ludum-icons.css"></head>
 <body>
     <dropdown id="dropdown" class="phone">
         <a href="/">Home</a>
@@ -19,7 +18,7 @@
     <nav>
         <content>
             <div id="l">
-                <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="logo" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M112.5 70L75 10L0 130H75H78.4788L114.239 72.783L112.5 70ZM120.136 82.217L90.2712 130H150L120.136 82.217Z" fill="currentColor"/>
                 </svg>
             </div>
@@ -40,8 +39,10 @@
     <main>
         <section> 
             <content>
-                <h1 class="gradient blue">Design Philosophy</h1>
+                <div class="hero">
+                    <h1 class="gradient blue">Design Philosophy</h1>
                 <h2>A good design is as important as good products</h2>
+                </div>
                 <p>We want to make good quality products, but for that, you not only need a good UX, but also a good UI. A big part in designing something is consistency, which is the exact reason we made <span class="branded">LUDUM<span class="bold">DESIGN</span></span>. It is a combination of font, color and size choice for almost all of our products. It can also be adapted to many other color schemes, which makes it perfect for apps like Jabsy that offer vast amounts of customizability. Ludum Design was inspired by Apple and Vercel's design languages and Ludum Icons, Ludum Design's icon pack, is inspired by Font Awesome and Feather Icons.</p>
             </content>
         </section>
@@ -50,17 +51,6 @@
         <span>2022 <span class="branded bold">CHRONICAL</span></span>
     </footer>
 
-    <script>
-        const dropdownToggle = document.querySelector('#dropdown-toggle');
-        const dropdown = document.querySelector('#dropdown');
-        const nav = document.querySelector('nav');
-
-        dropdownToggle.addEventListener('click', () => {
-            let isOn = dropdownToggle.classList.contains('on');
-            isOn ? dropdownToggle.classList.remove('on') : dropdownToggle.classList.add('on');
-            isOn ? dropdown.classList.remove('on') : dropdown.classList.add('on');
-            nav.style = !isOn ? 'background: transparent; backdrop-filter: none;' : ''
-        })
-    </script>
+    <script src="general.js"></script>
 </body>
 </html>

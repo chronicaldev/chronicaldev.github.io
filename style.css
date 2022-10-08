@@ -1,8 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --border-color: #414144;
-
+    --accent: #F15025;
     --nav-h: 3.5rem;
+}
+
+.hero {
+    min-height: 15rem;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.hero h1 {
+    font-size: clamp(1.5rem, 22vw, 4rem);
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.hero h2 {
+    font-size: clamp(1rem, 10vw, 1.6rem);
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    color: #757575;
 }
 
 h1.gradient, h2.gradient, h3.gradient, h4.gradient, h5.gradient, h6.gradient, a.gradient, p.gradient, span.gradient, b.gradient, i.gradient, u.gradient {
@@ -10,6 +35,8 @@ h1.gradient, h2.gradient, h3.gradient, h4.gradient, h5.gradient, h6.gradient, a.
     position: relative;
     background-image: linear-gradient(var(--angle), var(--start-color) 0%, var(--end-color) 100%);
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: transparent
 }
 
@@ -29,7 +56,7 @@ h1.gradient, h2.gradient, h3.gradient, h4.gradient, h5.gradient, h6.gradient, a.
 }
 
 button {
-    --bg: #fdfdfd;
+    --bg: #f1f1f1;
     --text: #161617;
     background: var(--bg);
     border: none;
@@ -37,22 +64,78 @@ button {
     padding: .7rem 2rem;
     border-radius: .5rem;
     font-size: 1.2rem;
+    line-height: 1.2rem;
     min-width: 20vw;
     font-weight: 700;
     cursor: pointer;
-    border: 1px solid #fdfdfd;
+    border: 1px solid #f1f1f1;
     box-sizing: border-box;
-    transition: color 150ms ease, background-color 150ms ease, transform 150ms ease;
+    transition: color 150ms ease, background-color 150ms ease, transform 150ms ease, border 150ms ease;
     margin: .5rem;
+}
+
+button.ghost {
+    --bg: transparent;
+    --text: #f1f1f1;
+    border: 1px solid transparent;
+}
+
+button.ghost:hover {
+    --bg: #282829;
+    border: 1px solid var(--bg);
+}
+
+button.accent {
+    --bg: var(--accent);
+    --text: #f1f1f1;
+    border: 1px solid var(--bg);
+}
+
+button.accent:hover {
+    --bg: hsl(11, 65%, 48%);
+    --text: #f1f1f1;
+    border: 1px solid var(--bg);
+}
+
+div.button-group {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+p b {
+    font-size: 1.2rem;
+}
+
+button i {
+    height: 1.2rem;
 }
 
 button:hover {
     --bg: #161617;
-    --text: #fdfdfd;
+    --text: #f1f1f1;
 }
 
 button:active {
     transform: scale(0.9);
+}
+
+div.group {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div.group > * {
+    width: 100%;
+    word-wrap: pre-line;
 }
 
 ::-webkit-scrollbar {
@@ -81,7 +164,7 @@ html, body {
     background-color: white;
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    color: #fdfdfd;
+    color: #f1f1f1;
     background: #161617;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
@@ -98,7 +181,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    color: #fdfdfd;
+    color: #f1f1f1;
 }
 
 nav a {
@@ -111,7 +194,7 @@ nav a:hover {
 }
 
 nav svg {
-    color: #fdfdfd;
+    color: #f1f1f1;
     height: calc(var(--nav-h) / 2);
 }
 
@@ -198,13 +281,21 @@ footer {
     position: absolute;
     width: 2rem;
     height: 2px;
-    background-color: #fdfdfd;
-    transition: top var(--transition-time) ease var(--transition-time), transform var(--transition-time) ease, opacity 0ms linear var(--transition-time);
+    background-color: #f1f1f1;
+    will-change: transform, top;
 }
 
-.dropdown-toggle.on div, .dropdown-toggle.on div::before, .dropdown-toggle.on div::after {
-    transition: top var(--transition-time) ease, transform var(--transition-time) ease var(--transition-time), opacity 0ms linear var(--transition-time);
+@supports not (-webkit-touch-callout: none) {
+    .dropdown-toggle div, .dropdown-toggle div::before, .dropdown-toggle div::after {
+        transition: top var(--transition-time) ease var(--transition-time), transform var(--transition-time) ease, opacity 0ms linear var(--transition-time);
+    }
+
+    .dropdown-toggle.on div, .dropdown-toggle.on div::before, .dropdown-toggle.on div::after {
+        transition: top var(--transition-time) ease, transform var(--transition-time) ease var(--transition-time), opacity 0ms linear var(--transition-time);
+    } 
 }
+
+
 
 .dropdown-toggle div {
     top: calc(1rem - 2px);
@@ -244,7 +335,8 @@ dropdown {
     background: #161617;
     transition: opacity 150ms ease, transform 300ms ease;
     padding: 1rem;
-    padding-top: calc(var(--nav-h) + 1rem)
+    padding-top: calc(var(--nav-h) + 1rem);
+    will-change: transform, opacity;
 }
 
 dropdown:not(.on) {
@@ -338,17 +430,71 @@ a:hover {
     font-weight: 700;
 }
 
+.main-hero h1 {
+    font-size: 7vw;
+    font-family: Inter;
+    font-weight: 900;
+    margin: 0;
+}
+
+.main-hero {
+    isolation: isolate;
+    background: url("assets/images/wave-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-hero > div {
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    cursor: pointer;
+    transition: filter 150ms ease;
+}
+
+#logo:hover {
+    filter: brightness(80%);
+}
+
 @media (max-width: 767px) {
+    div.button-group {
+        flex-direction: column;
+    }
+
+    .main-hero h1 {
+        font-size: 10vw;
+    }
+
+    .main-hero h2 {
+        font-size: 5vw;
+        margin: 1rem;
+    }
+
+    p {
+        margin: 2rem 1.5rem;
+    }
+
+    .hero h1 {
+        flex: 1;
+        font-size: 3.5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
     .desktop, nav a {
         display: none;
     }
 
     .grid-2 {
         grid-template-columns: 1fr;
-    }
-
-    button {
-        width: calc(100% - 1rem);
     }
 }
 
