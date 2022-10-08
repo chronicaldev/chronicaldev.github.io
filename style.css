@@ -44,6 +44,7 @@
     height: 50%;
 }
 
+
 h1.gradient, h2.gradient, h3.gradient, h4.gradient, h5.gradient, h6.gradient, a.gradient, p.gradient, span.gradient, b.gradient, i.gradient, u.gradient {
     --angle: 90deg;
     position: relative;
