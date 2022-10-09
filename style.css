@@ -66,7 +66,7 @@ div.row {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 35vh;
 }
 
 h1.gradient, h2.gradient, h3.gradient, h4.gradient, h5.gradient, h6.gradient, a.gradient, p.gradient, span.gradient, b.gradient, i.gradient, u.gradient {
@@ -113,6 +113,15 @@ button {
     margin: .5rem;
 }
 
+button:hover {
+    --bg: transparent;
+    --text: var(--text);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
 button.ghost {
     --bg: transparent;
     --text: var(--text);
@@ -136,35 +145,12 @@ button.accent:hover {
     border: 1px solid var(--bg);
 }
 
-div.button-group {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-div.button-group button {
-    margin: 0;
-}
-
 p b {
     font-size: 1.2rem;
 }
 
 button i {
     height: 1.2rem;
-}
-
-button:hover {
-    --bg: transparent;
-    --text: var(--text);
-}
-
-button:active {
-    transform: scale(0.9);
 }
 
 div.group {
@@ -486,6 +472,16 @@ a:hover {
     background: url("assets/images/wave-haikei.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+}
+
+.note {
+    position: absolute;
+    bottom: .25rem;
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+    color: #606060;
 }
 
 .main-hero > div {
