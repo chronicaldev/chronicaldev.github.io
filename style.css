@@ -2,8 +2,33 @@
 :root {
     --border-color: #414144;
     --accent: #F15025;
+    --blue: #3185fc;
     --nav-h: 3.5rem;
+    --text: #f1f1f1;
 }
+
+a {
+    font-size: 1.2rem;
+    color: var(--blue);
+}
+
+a.accent {
+    color: var(--accent);
+}
+
+a i {
+    font-size: .9rem;
+}
+
+div.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 
 .hero {
     min-height: 15rem;
@@ -44,7 +69,6 @@
     height: 50%;
 }
 
-
 h1.gradient, h2.gradient, h3.gradient, h4.gradient, h5.gradient, h6.gradient, a.gradient, p.gradient, span.gradient, b.gradient, i.gradient, u.gradient {
     --angle: 90deg;
     position: relative;
@@ -71,7 +95,7 @@ h1.gradient, h2.gradient, h3.gradient, h4.gradient, h5.gradient, h6.gradient, a.
 }
 
 button {
-    --bg: #f1f1f1;
+    --bg: var(--text);
     --text: #161617;
     background: var(--bg);
     border: none;
@@ -83,7 +107,7 @@ button {
     min-width: 20vw;
     font-weight: 700;
     cursor: pointer;
-    border: 1px solid #f1f1f1;
+    border: 1px solid var(--text);
     box-sizing: border-box;
     transition: color 150ms ease, background-color 150ms ease, transform 150ms ease, border 150ms ease;
     margin: .5rem;
@@ -91,7 +115,7 @@ button {
 
 button.ghost {
     --bg: transparent;
-    --text: #f1f1f1;
+    --text: var(--text);
     border: 1px solid transparent;
 }
 
@@ -102,13 +126,13 @@ button.ghost:hover {
 
 button.accent {
     --bg: var(--accent);
-    --text: #f1f1f1;
+    --text: var(--text);
     border: 1px solid var(--bg);
 }
 
 button.accent:hover {
     --bg: hsl(11, 65%, 48%);
-    --text: #f1f1f1;
+    --text: var(--text);
     border: 1px solid var(--bg);
 }
 
@@ -119,6 +143,11 @@ div.button-group {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+
+div.button-group button {
+    margin: 0;
 }
 
 p b {
@@ -130,8 +159,8 @@ button i {
 }
 
 button:hover {
-    --bg: #161617;
-    --text: #f1f1f1;
+    --bg: transparent;
+    --text: var(--text);
 }
 
 button:active {
@@ -179,7 +208,7 @@ html, body {
     background-color: white;
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    color: #f1f1f1;
+    color: var(--text);
     background: #161617;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
@@ -196,7 +225,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    color: #f1f1f1;
+    color: var(--text);
 }
 
 nav a {
@@ -209,7 +238,7 @@ nav a:hover {
 }
 
 nav svg {
-    color: #f1f1f1;
+    color: var(--text);
     height: calc(var(--nav-h) / 2);
 }
 
@@ -296,7 +325,7 @@ footer {
     position: absolute;
     width: 2rem;
     height: 2px;
-    background-color: #f1f1f1;
+    background-color: var(--text);
     will-change: transform, top;
 }
 
@@ -510,6 +539,10 @@ a:hover {
 
     .grid-2 {
         grid-template-columns: 1fr;
+    }
+
+    .product-head h1 {
+        margin: 0;
     }
 }
 
