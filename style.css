@@ -16,10 +16,6 @@ a.accent {
     color: var(--accent);
 }
 
-a i {
-    font-size: .9rem;
-}
-
 div.row {
     width: 100%;
     display: flex;
@@ -28,7 +24,6 @@ div.row {
     gap: 1rem;
     flex-wrap: wrap;
 }
-
 
 .hero {
     min-height: 15rem;
