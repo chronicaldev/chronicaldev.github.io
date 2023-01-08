@@ -8,7 +8,7 @@ const settings_button = document.querySelector('.settings-button');
 const settings_lang_german = document.querySelector('.settings .flag-icon-deu');
 const settings_lang_english = document.querySelector('.settings .flag-icon-gbr');
 
-let language = navigator.language == 'de' ? "german" : "english";
+let language = navigator.language.startsWith('de') ? "german" : "english";
 
 dropdownToggle.addEventListener('click', () => {
     let isOn = dropdownToggle.classList.contains('on');
