@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ideology - CHRONICAL</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ludum-icons.css"></head>
+    <link rel="stylesheet" href="ludum-icons.css">
+    <link rel="stylesheet" href="flag-icon.css">
+    <script src="general.js" defer></script>
+    <script src="localisation/general_localisation.js" defer></script>
+    <script src="localisation/ideology_localisation.js" defer></script>
+</head>
 <body>
     <dropdown id="dropdown" class="phone">
-        <a class="nav" href="/">Home</a>
-        <a class="nav" href="/products.html">Products</a>
-        <a class="nav" href="/ideology.html">Ideology</a>
-        <a class="nav" href="/design-philosophy.html">Design Philosophy</a>
-        <a class="nav" href="/about.html">About</a>
+        <a class="nav lcl_home_page" href="/">Home</a>
+        <a class="nav lcl_products_page" href="/products.html">Products</a>
+        <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
+        <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
+        <a class="nav lcl_about_page" href="/about.html">About</a>
+        <div class="options-row">
+            <div class="left"><b>Language</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>  
     </dropdown>
     <nav>
         <content>
@@ -23,16 +35,17 @@
                 </svg>
             </div>
             <div id="m">
-                <a class="nav" href="/">Home</a>
-                <a class="nav" href="/products.html">Products</a>
-                <a class="nav" href="/ideology.html">Ideology</a>
-                <a class="nav" href="/design-philosophy.html">Design Philosophy</a>
-                <a class="nav" href="/about.html">About</a>
+                <a class="nav lcl_home_page" href="/">Home</a>
+                <a class="nav lcl_products_page" href="/products.html">Products</a>
+                <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
+                <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
+                <a class="nav lcl_about_page" href="/about.html">About</a>
             </div>
             <div id="r">
                 <div id="dropdown-toggle" class="phone dropdown-toggle">
                     <div></div>
                 </div>
+                <i class="settings-button cogwheel"></i>
             </div>
         </content>
     </nav>
@@ -40,17 +53,26 @@
         <section> 
             <content>
                 <div class="hero">
-                    <h1 class="gradient orange">Our Ideology</h1>
-                    <h2>Free as in Freedom</h2>
+                    <h1 class="gradient orange lcl_ideology_title">Our Ideology</h1>
+                    <h2 class="lcl_ideology_subtitle">Free as in Freedom</h2>
                 </div>
-                <p>We at CHRONICAL, that is currently just me, think, that software should be free, transparent and well-made at the same time. That is why we, together with 707, aim to make the future of software the best it can be. This also means that we might not make as much money as others (meaning nothing at the moment), but we also want to go that extra kilometer for a better User experience. In addition to that, we try to collect as few data as possible from our Users while also letting them see what we do and decide for themselves what we are allowed to collect. We work with multiple technologies, such as Tauri and ASP.NET to ensure a balance between safety, performance and developer experience. That way everyone has fun: The end user and the developer! Isn't that great?</p>
+                <p class="lcl_ideology_content">We at CHRONICAL, that is currently just me, think, that software should be free, transparent and well-made at the same time. That is why we, together with 707, aim to make the future of software the best it can be. This also means that we might not make as much money as others (meaning nothing at the moment), but we also want to go that extra kilometer for a better User experience. In addition to that, we try to collect as few data as possible from our Users while also letting them see what we do and decide for themselves what we are allowed to collect. We work with multiple technologies, such as Tauri and ASP.NET to ensure a balance between safety, performance and developer experience. That way everyone has fun: The end user and the developer! Isn't that great?</p>
             </content>
         </section>
     </main>
     <footer>
         <span>2022 <span class="branded bold">CHRONICAL</span></span>
     </footer>
-
-    <script src="general.js"></script>
+<div class="settings">
+        <i class="cross"></i>
+        <h1 class="lcl_settings_title">Settings</h1>
+        <div class="options-row">
+            <div class="left"><b>Language</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>        
+    </div>
 </body>
 </html>

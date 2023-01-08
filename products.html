@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - CHRONICAL</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ludum-icons.css"></head>
+    <link rel="stylesheet" href="ludum-icons.css">
+    <link rel="stylesheet" href="flag-icon.css">
+    
+    <script src="general.js" defer></script>
+    <script src="localisation/products_localisation.js" defer></script>
+    <script src="localisation/general_localisation.js" defer></script>
+</head>
 
     <style>
         .flash {
@@ -18,15 +24,36 @@
                 background-image: url('assets/images/flash.svg');
             }
         }
+
+    .jabsy {
+        background-position: center;
+        background-image: url('assets/images/jabsy.svg')
+    }
         
+    @media (max-width: 848px) {
+        
+    }
+
+    @media (max-width: 1300px) and (min-width: 849px) {
+        .jabsy {
+            background-image: linear-gradient(red, blue)
+        }
+    }
     </style>
 <body>
     <dropdown id="dropdown" class="phone">
-        <a class="nav" href="/">Home</a>
-        <a class="nav" href="/products.html">Products</a>
-        <a class="nav" href="/ideology.html">Ideology</a>
-        <a class="nav" href="/design-philosophy.html">Design Philosophy</a>
-        <a class="nav" href="/about.html">About</a>
+        <a class="nav lcl_home_page" href="/">Home</a>
+        <a class="nav lcl_products_page" href="/products.html">Products</a>
+        <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
+        <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
+        <a class="nav lcl_about_page" href="/about.html">About</a>
+        <div class="options-row">
+            <div class="left"><b>Language</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>  
     </dropdown>
     <nav>
         <content>
@@ -36,16 +63,17 @@
                 </svg>
             </div>
             <div id="m">
-                <a class="nav" href="/">Home</a>
-                <a class="nav" href="/products.html">Products</a>
-                <a class="nav" href="/ideology.html">Ideology</a>
-                <a class="nav" href="/design-philosophy.html">Design Philosophy</a>
-                <a class="nav" href="/about.html">About</a>
+                <a class="nav lcl_home_page" href="/">Home</a>
+                <a class="nav lcl_products_page" href="/products.html">Products</a>
+                <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
+                <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
+                <a class="nav lcl_about_page" href="/about.html">About</a>
             </div>
             <div id="r">
                 <div id="dropdown-toggle" class="phone dropdown-toggle">
                     <div></div>
                 </div>
+                <i class="settings-button cogwheel"></i>
             </div>
         </content>
     </nav>
@@ -54,20 +82,30 @@
             <content class="split-half">
                 <div class="product-head">
                     <h1>Flash Shell</h1>
-                    <h2>Learn once, use everywhere</h2>
+                    <h2 class="lcl_flash_shell_motto">Learn once, use everywhere</h2>
                     <div class="row">
                         <a href="https://github.com/BlackBirdTV/flash-shell">GitHub <i class="chevron-right"></i></a>
                         <a href="https://blackbirdtv.github.io/flash-shell">Website <i class="chevron-right"></i></a>
                     </div>
                 </div>
             </content>
-            <h2 class="note">Note: Flash is currently not available on macOS</h2>
+            <h2 class="note lcl_flash_shell_note">Note: Flash is currently not available on macOS</h2>
         </section>
+        
     </main>
     <footer>
         <span>2022 <span class="branded bold">CHRONICAL</span></span>
     </footer>
-
-    <script src="general.js"></script>
+<div class="settings">
+        <i class="cross"></i>
+        <h1 class="lcl_settings_title">Settings</h1>
+        <div class="options-row">
+            <div class="left"><b>Language</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>        
+    </div>
 </body>
 </html>

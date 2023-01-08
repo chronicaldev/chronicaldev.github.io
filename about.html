@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - CHRONICAL</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ludum-icons.css"></head>
+    <link rel="stylesheet" href="ludum-icons.css">
+    <link rel="stylesheet" href="flag-icon.css">
+    <script src="general.js" defer></script>
+    <script src="localisation/general_localisation.js" defer></script>
+    <script src="localisation/about_localisation.js" defer></script>
+</head>
 <body>
     <dropdown id="dropdown" class="phone">
-        <a class="nav" href="/">Home</a>
-        <a class="nav" href="/products.html">Products</a>
-        <a class="nav" href="/ideology.html">Ideology</a>
-        <a class="nav" href="/design-philosophy.html">Design Philosophy</a>
-        <a class="nav" href="/about.html">About</a>
+        <a class="nav lcl_home_page" href="/">Home</a>
+        <a class="nav lcl_products_page" href="/products.html">Products</a>
+        <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
+        <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
+        <a class="nav lcl_about_page" href="/about.html">About</a>
+        <div class="options-row">
+            <div class="left"><b>Language</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>  
     </dropdown>
     <nav>
         <content>
@@ -23,16 +35,17 @@
                 </svg>
             </div>
             <div id="m">
-                <a class="nav" href="/">Home</a>
-                <a class="nav" href="/products.html">Products</a>
-                <a class="nav" href="/ideology.html">Ideology</a>
-                <a class="nav" href="/design-philosophy.html">Design Philosophy</a>
-                <a class="nav" href="/about.html">About</a>
+                <a class="nav lcl_home_page" href="/">Home</a>
+                <a class="nav lcl_products_page" href="/products.html">Products</a>
+                <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
+                <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
+                <a class="nav lcl_about_page" href="/about.html">About</a>
             </div>
             <div id="r">
                 <div id="dropdown-toggle" class="phone dropdown-toggle">
                     <div></div>
                 </div>
+                <i class="settings-button cogwheel"></i>
             </div>
         </content>
     </nav>
@@ -40,14 +53,14 @@
         <section> 
             <content>
                 <div class="hero">
-                    <h1 class="gradient purple">About Us</h1>
-                    <h2>Who we are</h2>
+                    <h1 class="gradient purple lcl_about_title">About Us</h1>
+                    <h2 class="lcl_about_subtitle">Who we are</h2>
                 </div>
-                <p>Chronical is a group of people that love to code. We aim to make our Software the best it can be and make alternatives to popular closed-source apps. That way, everyone can make sure we don't sell your data and that everything is secure. We are located in the german alps, which is where our logo originates from.</p>
+                <p class="lcl_about_content">Chronical is a group of people that love to code. We aim to make our Software the best it can be and make alternatives to popular closed-source apps. That way, everyone can make sure we don't sell your data and that everything is secure. We are located in the german alps, which is where our logo originates from.</p>
                 <div class="group">
                     <p>
-                        <b>Contact</b><br>
-                        Email: chronicalde@gmail.com
+                        <b class="lcl_about_contact_title">Contact</b><br>
+                        <span class="lcl_about_contact_content">Email: chronicalde@gmail.com</span>
                     </p>
                     <p></p>
                 </div>
@@ -57,7 +70,16 @@
     <footer>
         <span>2022 <span class="branded bold">CHRONICAL</span></span>
     </footer>
-
-    <script src="general.js"></script>
+<div class="settings">
+        <i class="cross"></i>
+        <h1 class="lcl_settings_title">Settings</h1>
+        <div class="options-row">
+            <div class="left"><b>Language</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>        
+    </div>
 </body>
 </html>

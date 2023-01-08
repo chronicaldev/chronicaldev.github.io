@@ -7,14 +7,25 @@
     <title>Home - CHRONICAL</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ludum-icons.css">
+    <link rel="stylesheet" href="flag-icon.css">
+    <script src="general.js" defer></script>
+    <script src="localisation/index_localisation.js" defer></script>
+    <script src="localisation/general_localisation.js" defer></script>
 </head>
 <body>
     <dropdown id="dropdown" class="phone">
-        <a class="nav" href="/">Home</a>
-        <a class="nav" href="/products.html">Products</a>
-        <a class="nav" href="/ideology.html">Ideology</a>
-        <a class="nav" href="/design-philosophy.html">Design Philosophy</a>
-        <a class="nav" href="/about.html">About</a>
+        <a class="nav lcl_home_page" href="/">Home</a>
+        <a class="nav lcl_products_page" href="/products.html">Products</a>
+        <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
+        <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
+        <a class="nav lcl_about_page" href="/about.html">About</a>
+        <div class="options-row">
+            <div class="left"><b>Language</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>  
     </dropdown>
     <nav>
         <content>
@@ -24,33 +35,34 @@
                 </svg>
             </div>
             <div id="m">
-                <a class="nav" href="/">Home</a>
-                <a class="nav" href="/products.html">Products</a>
-                <a class="nav" href="/ideology.html">Ideology</a>
-                <a class="nav" href="/design-philosophy.html">Design Philosophy</a>
-                <a class="nav" href="/about.html">About</a>
+                <a class="nav lcl_home_page" href="/">Home</a>
+                <a class="nav lcl_products_page" href="/products.html">Products</a>
+                <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
+                <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
+                <a class="nav lcl_about_page" href="/about.html">About</a>
             </div>
             <div id="r">
                 <div id="dropdown-toggle" class="phone dropdown-toggle">
                     <div></div>
                 </div>
+                <i class="settings-button cogwheel"></i>
             </div>
         </content>
     </nav>
     <main>
         <section class="main-hero"> 
             <div>
-                <h1 class="big">
+                <h1 class="big lcl_index_title">
                     Open Source for everyone
                 </h1>
-                <h2>
+                <h2 class="lcl_index_subtitle">
                     Making the world a better place with free software that works.
                 </h2>
             </div>
             <div>
                 <div class="row">
-                    <button onclick="window.location.href = 'ideology'" class="ghost">Our Ideology</button>
-                    <button onclick="window.location.href = 'products'" class="accent">Our Products</button>
+                    <button onclick="window.location.href = 'ideology'" class="ghost lcl_index_btn_ideology">Our Ideology</button>
+                    <button onclick="window.location.href = 'products'" class="accent lcl_index_btn_products">Our Products</button>
                 </div>
             </div>
         </section>
@@ -59,6 +71,16 @@
         <span>2022 <span class="branded bold">CHRONICAL</span></span>
     </footer>
 
-    <script src="general.js"></script>
+    <div class="settings">
+        <i class="cross"></i>
+        <h1 class="lcl_settings_title">Settings</h1>
+        <div class="options-row">
+            <div class="left"><b>Language</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>        
+    </div>
 </body>
 </html>
