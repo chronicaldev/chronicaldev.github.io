@@ -2,6 +2,7 @@ const dropdownToggle = document.querySelector('#dropdown-toggle');
 const dropdown = document.querySelector('#dropdown');
 const nav = document.querySelector('nav');
 const logo = document.querySelector('#logo');
+
 const settings_lang_german = document.querySelectorAll('.flag-icon-deu');
 const settings_lang_english = document.querySelectorAll('.flag-icon-gbr');
 
