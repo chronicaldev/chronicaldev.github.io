@@ -5,74 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Philosophy - CHRONICAL</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ludum-icons.css">
-    <link rel="stylesheet" href="flag-icon.css">
-    <script src="general.js" defer></script>
-    <script src="localisation/general_localisation.js" defer></script>
-    <script src="localisation/design_philosophy_localisation.js" defer></script>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <dropdown id="dropdown" class="phone">
-        <a class="nav lcl_home_page" href="/">Home</a>
-        <a class="nav lcl_products_page" href="/products.html">Products</a>
-        <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
-        <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
-        <a class="nav lcl_about_page" href="/about.html">About</a>
-        <div class="options-row">
-            <div class="left"><b>Language</b></div>
-            <div class="right">
-                <span class="flag-icon flag-icon-deu"></span>
-                <span class="flag-icon flag-icon-gbr"></span>
-            </div>
-        </div>  
-    </dropdown>
-    <nav>
-        <content>
-            <div id="l">
-                <svg id="logo" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M112.5 70L75 10L0 130H75H78.4788L114.239 72.783L112.5 70ZM120.136 82.217L90.2712 130H150L120.136 82.217Z" fill="currentColor"/>
-                </svg>
-            </div>
-            <div id="m">
-                <a class="nav lcl_home_page" href="/">Home</a>
-                <a class="nav lcl_products_page" href="/products.html">Products</a>
-                <a class="nav lcl_ideology_page" href="/ideology.html">Ideology</a>
-                <a class="nav lcl_design_philosophy_page" href="/design-philosophy.html">Design Philosophy</a>
-                <a class="nav lcl_about_page" href="/about.html">About</a>
-            </div>
-            <div id="r">
-                <div id="dropdown-toggle" class="phone dropdown-toggle">
-                    <div></div>
-                </div>
-                <i class="settings-button cogwheel"></i>
-            </div>
-        </content>
-    </nav>
-    <main>
-        <section> 
-            <content>
-                <div class="hero">
-                    <h1 class="gradient blue lcl_design_philosophy_title">Design Philosophy</h1>
-                <h2 class="lcl_design_philosophy_subtitle">A good design is as important as good products</h2>
-                </div>
-                <p class="lcl_design_philosophy_content">We want to make good quality products, but for that, you not only need a good UX, but also a good UI. A big part in designing something is consistency, which is the exact reason we made Ludum Design. It is a combination of font, color and size choice for almost all of our products. It can also be adapted to many other color schemes, which makes it perfect for apps like Jabsy that offer vast amounts of customizability. Ludum Design was inspired by Apple and Vercel's design languages and Ludum Icons, Ludum Design's icon pack, is inspired by Font Awesome and Feather Icons.</p>
-            </content>
-        </section>
-    </main>
-    <footer>
-        <span>2022 <span class="branded bold">CHRONICAL</span></span>
-    </footer>
-<div class="settings">
-        <i class="cross"></i>
-        <h1 class="lcl_settings_title">Settings</h1>
-        <div class="options-row">
-            <div class="left"><b>Language</b></div>
-            <div class="right">
-                <span class="flag-icon flag-icon-deu"></span>
-                <span class="flag-icon flag-icon-gbr"></span>
-            </div>
-        </div>        
-    </div>
+    <section class="big-hero">
+        <div>
+            <h1 class="big">
+                Redirecting...
+            </h1>
+            <h2>
+                We're redirecting you to the site you requested.
+            </h2>
+        </div>
+    </section>
+    <script>
+        if (navigator.language.includes('de')) {
+            window.location.href ="/de/design-philosophy"
+        }
+        else {
+            window.location.href ="/en/design-philosophy"
+        }
+    </script>
 </body>
 </html>

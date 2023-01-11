@@ -493,7 +493,7 @@ a:hover {
     font-weight: 700;
 }
 
-.main-hero h1 {
+.main-hero h1, .big-hero h1 {
     font-size: clamp(90px, 7vw, 120px);
     font-family: Inter;
     font-weight: 900;
@@ -507,6 +507,12 @@ a:hover {
     background-size: cover;
     background-position: center;
 }
+
+.big-hero {
+    display: grid;
+    place-items: center;
+}
+
 
 .note {
     position: absolute;
@@ -562,7 +568,7 @@ a:hover {
         margin-right: 2rem;
     }
 
-    .desktop, nav a, nav i.settings-button {
+    .desktop, nav a, #r .flag-icon {
         display: none;
     }
 

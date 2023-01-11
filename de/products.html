@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - CHRONICAL</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/ludum-icons.css">
+    <link rel="stylesheet" href="/flag-icon.css">
+    
+    <script src="/general.js" defer></script>
+    <script src="localisation/products_localisation.js" defer></script>
+</head>
+
+    <style>
+        .flash {
+            background-image: url('/assets/images/flash-mobile.svg');
+        }
+
+        @media (min-height: 640px) and (min-width: 120vh) { 
+            .flash {
+                background-image: url('/assets/images/flash.svg');
+            }
+        }
+
+    .jabsy {
+        background-position: center;
+        background-image: url('/assets/images/jabsy.svg')
+    }
+        
+    @media (max-width: 848px) {
+        
+    }
+
+    @media (max-width: 1300px) and (min-width: 849px) {
+        .jabsy {
+            background-image: linear-gradient(red, blue)
+        }
+    }
+    </style>
+<body>
+    <dropdown id="dropdown" class="phone">
+        <a class="nav" href="./">Start</a>
+        <a class="nav" href="./products">Produkte</a>
+        <a class="nav" href="./ideology">Ideologie</a>
+        <a class="nav" href="./design-philosophy">Designphilosophie</a>
+        <a class="nav" href="./about">Über uns</a>
+        <div class="options-row">
+            <div class="left"><b>Sprache</b></div>
+            <div class="right">
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </div>  
+    </dropdown>
+    <nav>
+        <content>
+            <div id="l">
+                <svg id="logo" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M112.5 70L75 10L0 130H75H78.4788L114.239 72.783L112.5 70ZM120.136 82.217L90.2712 130H150L120.136 82.217Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div id="m">
+                <a class="nav" href="./">Start</a>
+                <a class="nav" href="./products">Produkte</a>
+                <a class="nav" href="./ideology">Ideologie</a>
+                <a class="nav" href="./design-philosophy">Designphilosophie</a>
+                <a class="nav" href="./about">Über uns</a>
+            </div>
+            <div id="r">
+                <div id="dropdown-toggle" class="phone dropdown-toggle">
+                    <div></div>
+                </div>
+                <span class="flag-icon flag-icon-deu"></span>
+                <span class="flag-icon flag-icon-gbr"></span>
+            </div>
+        </content>
+    </nav>
+    <main>
+        <section class="bg-img flash"> 
+            <content class="split-half">
+                <div class="product-head">
+                    <h1>Flash Shell</h1>
+                    <h2 class="">Einmal lernen, überall benutzen</h2>
+                    <div class="row">
+                        <a href="https://github.com/BlackBirdTV/flash-shell">GitHub <i class="chevron-right"></i></a>
+                        <a href="https://blackbirdtv.github.io/flash-shell">Website <i class="chevron-right"></i></a>
+                    </div>
+                </div>
+            </content>
+            <h2 class="note">Flash Shell ist momentan nicht auf macOS verfügbar</h2>
+        </section>
+    </main>
+    <footer>
+        <span>2022 <span class="branded bold">CHRONICAL</span></span>
+    </footer>
+</body>
+</html>
