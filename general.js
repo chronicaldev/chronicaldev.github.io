@@ -2,13 +2,8 @@ const dropdownToggle = document.querySelector('#dropdown-toggle');
 const dropdown = document.querySelector('#dropdown');
 const nav = document.querySelector('nav');
 const logo = document.querySelector('#logo');
-const settings = document.querySelector('.settings');
-const settings_close = document.querySelector('.settings .cross');
-const settings_button = document.querySelector('.settings-button');
-const settings_lang_german = document.querySelector('.settings .flag-icon-deu');
-const settings_lang_english = document.querySelector('.settings .flag-icon-gbr');
-
-let language = navigator.language == 'de' ? "german" : "english";
+const settings_lang_german = document.querySelectorAll('.flag-icon-deu');
+const settings_lang_english = document.querySelectorAll('.flag-icon-gbr');
 
 dropdownToggle.addEventListener('click', () => {
     let isOn = dropdownToggle.classList.contains('on');
@@ -21,26 +16,33 @@ logo.addEventListener('click', () => {
     window.location.href = '/';
 })
 
-settings_close.addEventListener('click', () => {
-    if (settings.classList.contains('on')) settings.classList.remove('on');
-});
+settings_lang_german.forEach(el => el.addEventListener('click', () => {
+    window.location.href = window.location.href.replace('/en', '/de');
+}));
 
-settings_button.addEventListener('click', () => {
-    if (!settings.classList.contains('on')) settings.classList.add('on');
-});
+settings_lang_english.forEach(el => el.addEventListener('click', () => {
+    window.location.href = window.location.href.replace('/de', '/en');
+}));
 
-settings_lang_german.addEventListener('click', () => {
-    language = "german";
-    update();
-    update_general();
-});
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
-settings_lang_english.addEventListener('click', () => {
-    language = "english";
-    update();
-    update_general();
-});
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth <= 767 && settings.classList.contains('on')) settings.classList.remove('on');
-})
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return null;
+  }
