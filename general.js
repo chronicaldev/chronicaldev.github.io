@@ -13,15 +13,17 @@ dropdownToggle.addEventListener('click', () => {
 });
 
 logo.addEventListener('click', () => {
-    window.location.href = '/';
+    window.location.href = '/' + getCookie('lang') ?? navigator.language;
 })
 
 settings_lang_german.forEach(el => el.addEventListener('click', () => {
     window.location.href = window.location.href.replace('/en', '/de');
+    setCookie('lang', 'de', 9999);
 }));
 
 settings_lang_english.forEach(el => el.addEventListener('click', () => {
     window.location.href = window.location.href.replace('/de', '/en');
+    setCookie('lang', 'en', 9999);
 }));
 
 function setCookie(cname, cvalue, exdays) {
